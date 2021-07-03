@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "97992670822",
+    "firebase_url": "https://incidents-44eaf-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "incidents-44eaf",
+    "storage_bucket": "incidents-44eaf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97992670822:android:0d1267ac10ff873e5837a7",
+        "android_client_info": {
+          "package_name": "com.czech.incidents"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "97992670822-j1p2omgmdjuue18ra5v1ndmd8cafp8af.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.czech.incidents",
+            "certificate_hash": "51f594e5151f538e6bdc468166cc46c4f0f15819"
+          }
+        },
+        {
+          "client_id": "97992670822-tp9m8a42m3ierq2amhkgvbgf8rkpsq34.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM_RZpM-0hKYFcXvAw524Y4aQtw6wueNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "97992670822-tp9m8a42m3ierq2amhkgvbgf8rkpsq34.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
