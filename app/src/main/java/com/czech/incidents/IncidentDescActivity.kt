@@ -2,18 +2,14 @@ package com.czech.incidents
 
 import android.app.AlertDialog
 import android.app.Dialog
-import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import com.czech.incidents.databinding.ActivityIncidentsDescBinding
-import com.google.android.gms.maps.model.LatLng
 import com.google.firebase.database.*
 
 private const val INCIDENTS_REFS = "Incidents"

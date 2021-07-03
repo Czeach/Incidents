@@ -3,24 +3,15 @@ package com.czech.incidents
 import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
-import androidx.navigation.fragment.findNavController
-import com.czech.incidents.databinding.ActivityIncidentsListBinding
 
 class IncidentListActivity: DialogFragment() {
 
     private lateinit var alertDialog: AlertDialog
-
-    companion object {
-        const val TAG = "IncidentListActivity"
-    }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 

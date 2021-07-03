@@ -5,11 +5,8 @@ import android.content.Context
 import android.graphics.*
 import android.os.Bundle
 import android.util.DisplayMetrics
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
 import com.czech.incidents.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -39,8 +36,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         val markerImage = marker.findViewById(R.id.user_dp) as CircleImageView
         markerImage.setImageResource(icon)
-//        val txt_name = marker.findViewById(R.id.name) as TextView
-//        txt_name.text = _name
         val displayMetrics = DisplayMetrics()
         (context as Activity).windowManager.defaultDisplay.getMetrics(displayMetrics)
         ViewGroup.LayoutParams(52, ViewGroup.LayoutParams.WRAP_CONTENT)
@@ -190,13 +185,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             )
 
             showIncidentListDialog(latLong)
-
-//            map.addMarker(
-//                MarkerOptions()
-//                    .position(latLng)
-//                    .title(getString(R.string.added_pin))
-//                    .snippet(info)
-//            )
 
         }
     }
