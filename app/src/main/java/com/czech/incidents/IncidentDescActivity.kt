@@ -11,16 +11,13 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.Fragment
 import com.czech.incidents.databinding.ActivityIncidentsDescBinding
 import com.google.android.gms.maps.model.LatLng
 import com.google.firebase.database.*
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
 
 private const val INCIDENTS_REFS = "Incidents"
 
-class IncidentDescActivity(): DialogFragment() {
+class IncidentDescActivity: DialogFragment() {
 
     private lateinit var alertDialog: AlertDialog
     private lateinit var binding: ActivityIncidentsDescBinding
