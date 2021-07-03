@@ -4,8 +4,8 @@ import android.accounts.AuthenticatorDescription
 import com.google.android.gms.maps.model.LatLng
 
 data class Incidents(
-//    val incidentId: String?,
+    val incidentId: String?,
     val incidentType: String?,
-    val coordinates: LatLng?,
+    val coordinates: String?,
     val description: String?
 )

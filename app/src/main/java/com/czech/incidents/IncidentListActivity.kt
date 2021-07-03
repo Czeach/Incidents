@@ -43,8 +43,6 @@ class IncidentListActivity: DialogFragment() {
             descDialog.show(parentFragmentManager, "TAG")
         }
 
-        Toast.makeText(requireContext(), getCoord, Toast.LENGTH_LONG).show()
-
         val cancelBtn = incidentListView.findViewById<Button>(R.id.cancel_btn)
         cancelBtn.setOnClickListener {
             alertDialog.dismiss()
@@ -60,13 +58,11 @@ class IncidentListActivity: DialogFragment() {
                 }
 
                 R.id.accident_rb -> {
-                    Toast.makeText(requireContext(), "Accident selected", Toast.LENGTH_LONG).show()
 
                     toDesc("accident")
                 }
 
                 R.id.road_block_rb -> {
-                    Toast.makeText(requireContext(), "Road Block selected", Toast.LENGTH_LONG).show()
 
                     this.dismiss()
 
@@ -74,25 +70,21 @@ class IncidentListActivity: DialogFragment() {
                 }
 
                 R.id.crime_rb -> {
-                    Toast.makeText(requireContext(), "Crime/Theft selected", Toast.LENGTH_LONG).show()
 
                     toDesc("crime/theft")
                 }
 
                 R.id.construction_rb -> {
-                    Toast.makeText(requireContext(), "Road Construction selected", Toast.LENGTH_LONG).show()
 
                     toDesc("road construction")
                 }
 
                 R.id.fire_rb -> {
-                    Toast.makeText(requireContext(), "Fire selected", Toast.LENGTH_LONG).show()
 
                     toDesc("fire")
                 }
 
                 R.id.others_rb -> {
-                    Toast.makeText(requireContext(), "Others selected", Toast.LENGTH_LONG).show()
 
                     toDesc("others")
                 }

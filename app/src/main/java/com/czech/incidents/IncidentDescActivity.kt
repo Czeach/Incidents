@@ -2,6 +2,7 @@ package com.czech.incidents
 
 import android.app.AlertDialog
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
@@ -22,8 +23,7 @@ class IncidentDescActivity: DialogFragment() {
     private lateinit var alertDialog: AlertDialog
     private lateinit var binding: ActivityIncidentsDescBinding
 
-    private lateinit var firebaseDatabase: FirebaseDatabase
-    private lateinit var databaseReference: DatabaseReference
+    private lateinit var database: DatabaseReference
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -58,30 +58,28 @@ class IncidentDescActivity: DialogFragment() {
                 val incidentType = args?.getString("incidentType")
 
                 val getCoordString = args?.getString("coordinates")
-                val latLong = getCoordString?.split(',')
-                val latitude = latLong!![0].toDouble()
-                val longitude = latLong[1].toDouble()
-
-                val incidentCoord = LatLng(latitude, longitude)
 
                 val description = desc.text.toString()
 
-                firebaseDatabase = FirebaseDatabase.getInstance()
-                databaseReference = firebaseDatabase.getReference(INCIDENTS_REFS)
+                database = FirebaseDatabase.getInstance().getReference(INCIDENTS_REFS)
+                val id = database.push().key ?: ""
 
                 val incidents = Incidents(
+                    id,
                     incidentType,
-                    incidentCoord,
+                    getCoordString,
                     description
                 )
 
-                    databaseReference.setValue(incidents)
+                    database.child(id).setValue(incidents)
                         .addOnSuccessListener {
                             desc.text.clear()
 
                             Toast.makeText(requireContext(), "Reported incident: $id", Toast.LENGTH_LONG).show()
 
                             alertDialog.dismiss()
+
+
                         }
                         .addOnFailureListener {
                             Toast.makeText(requireContext(), "Failed to report: $it. Please try again", Toast.LENGTH_LONG).show()

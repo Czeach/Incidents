@@ -15,14 +15,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "97992670822-j1p2omgmdjuue18ra5v1ndmd8cafp8af.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.czech.incidents",
-            "certificate_hash": "51f594e5151f538e6bdc468166cc46c4f0f15819"
-          }
-        },
-        {
           "client_id": "97992670822-tp9m8a42m3ierq2amhkgvbgf8rkpsq34.apps.googleusercontent.com",
           "client_type": 3
         }
