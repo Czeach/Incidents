@@ -39,7 +39,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         map = googleMap
 
         val latitude = 6.46021
-        val longitude = 7.49619
+        val longitude =
+
+
         val zoomLevel = 15f
 
         val baseLocation = LatLng(latitude, longitude)
