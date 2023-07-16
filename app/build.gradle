@@ -41,6 +41,7 @@ android {
         kotlinCompilerExtensionVersion '1.4.7'
     }
     packagingOptions {
+        jniLibs.pickFirsts.add("lib/**/libc++_shared.so")
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
@@ -52,6 +53,9 @@ dependencies {
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+
+    // TomTom Map Display
+    implementation 'com.tomtom.sdk.maps:map-display:0.26.0'
 
     // Firebase
     implementation platform('com.google.firebase:firebase-bom:32.1.0')
